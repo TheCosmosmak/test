@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PK | Animation Showcase</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body class="anime-replica-body">
+
+    <nav class="main-nav">
+        <div class="logo">PK</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="animejs-replica.html" class="active">Showcase</a>
+            <a href="climate-manga.html">Manga</a>
+            <a href="azuki-world.html">Gallery</a>
+            <a href="steve-jobs-mindset.html">Mindset</a>
+        </div>
+    </nav>
+
+    <main class="anime-replica-main">
+        <!-- Section 1: Hero Animation -->
+        <section class="ar-hero">
+            <div class="ar-hero-content">
+                <div class="ar-logo-animation">
+                    <!-- This SVG is for the morphing animation -->
+                    <svg class="ar-logo-svg" width="100" height="100" viewBox="0 0 100 100">
+                        <path d="M 50 0 L 100 50 L 50 100 L 0 50 Z"/>
+                    </svg>
+                </div>
+                <h1 class="ar-title">
+                    <span class="ar-title-word">PIYUSH</span>
+                    <span class="ar-title-word">KUMAR</span>
+                </h1>
+                <p class="ar-description">A showcase of interactive and dynamic web animation.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Staggering Demo -->
+        <section class="ar-section ar-stagger">
+            <div class="ar-section-text">
+                <h2>Built-in Staggering System</h2>
+                <p>Create stunning ripple effects in seconds with the built-in stagger utility function.</p>
+            </div>
+            <div class="ar-animation-wrapper">
+                <div class="ar-stagger-grid"></div>
+            </div>
+        </section>
+
+        <!-- Section 3: Scroll Demo -->
+        <section class="ar-section ar-scroll">
+            <div class="ar-animation-wrapper">
+                <div class="ar-scroll-visualizer">
+                    <div class="ar-scroll-line"></div>
+                    <div class="ar-scroll-box"></div>
+                </div>
+            </div>
+            <div class="ar-section-text">
+                <h2>Synchronise on Scroll</h2>
+                <p>Easily create scroll-based animations and trigger events when elements enter the viewport.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Draggable Demo -->
+        <section class="ar-section ar-draggable">
+             <div class="ar-section-text">
+                <h2>Interactive & Draggable</h2>
+                <p>Build engaging user experiences with draggable elements that have realistic physics.</p>
+            </div>
+            <div class="ar-animation-wrapper">
+                <div class="ar-draggable-box">DRAG ME</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Kumar | 創造</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body class="home-body-v2">
+    
+    <nav class="main-nav">
+        <div class="logo">PK</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="animejs-replica.html">Showcase</a>
+            <a href="climate-manga.html">Manga</a>
+            <a href="azuki-world.html">Gallery</a>
+            <a href="steve-jobs-mindset.html">Mindset</a>
+        </div>
+    </nav>
+
+    <main class="home-main-v2">
+        <section class="hero-v2">
+            <div class="hero-v2-content">
+                <div class="profile-container">
+                    <img src="https://picsum.photos/seed/piyush-profile/200/200" alt="Piyush Kumar Profile Picture">
+                    <h1 class="japanese-title">道</h1>
+                </div>
+                <div class="hero-v2-text">
+                    <h2 class="name-v2">PIYUSH KUMAR</h2>
+                    <p class="bio-v2">Obsessed with AI breakthroughs & cutting-edge tech. My brain? Always running at full speed. My goal? Travel the world and see every corner of this planet. I don't follow trends. I create my own path.</p>
+                </div>
+            </div>
+             <div class="scroll-indicator-v2">
+                <span>SCROLL</span>
+            </div>
+        </section>
+
+        <section class="spacer-v2"></section>
+
+        <section class="katana-section">
+            <div class="katana-container">
+                <!-- Katana SVG -->
+                <svg class="katana-svg" viewBox="0 0 400 100">
+                    <defs>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path class="katana-blade" d="M0 50 H350 L380 40 L350 50 L380 60 Z" fill="white"/>
+                    <rect class="katana-guard" x="0" y="40" width="15" height="20" fill="#333"/>
+                </svg>
+            </div>
+            <div id="katana-particles"></div>
+            <h3 class="katana-text">THE BLADE IS THE SOUL</h3>
+        </section>
+
+        <section class="spacer-v2 final"></section>
+    </main>
+    
+    <script src="assets/main.js"></script>
+</body>
+</html>
