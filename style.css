@@ -1,0 +1,125 @@
+/* --- FONT IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Trajan:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* --- GLOBAL & NAVIGATION --- */
+:root {
+    --purple: #9333ea;
+    --blue: #3b82f6;
+    --dark-bg: #05030a;
+    --light-text: #e5e7eb;
+    --gray-text: #9ca3af;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--light-text); overflow-x: hidden; }
+.main-nav { position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; z-index: 1000; background: rgba(5, 3, 10, 0.5); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); }
+.main-nav .logo { font-family: 'Goudy+Trajan', serif; font-size: 2rem; font-weight: bold; background: linear-gradient(45deg, var(--purple), var(--blue)); -webkit-background-clip: text; color: transparent; }
+.main-nav .nav-links a { color: var(--gray-text); text-decoration: none; margin-left: 30px; font-weight: bold; transition: color 0.3s ease; position: relative; }
+.main-nav .nav-links a:hover, .main-nav .nav-links a.active { color: var(--light-text); }
+.main-nav .nav-links a.active::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background: var(--purple); }
+
+/* --- V2 INDEX PAGE (B&W, KATANA) --- */
+.home-body-v2 { background: #000; color: #fff; }
+.home-main-v2 { width: 100%; }
+.hero-v2 { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5%; border-bottom: 1px solid #333; }
+.hero-v2-content { display: flex; align-items: center; gap: 4rem; max-width: 1000px; }
+.profile-container { text-align: center; }
+.profile-container img { width: 150px; height: 150px; border-radius: 50%; border: 2px solid white; filter: grayscale(1); }
+.japanese-title { font-size: 5rem; font-weight: normal; margin-top: 1rem; }
+.name-v2 { font-family: 'Goudy+Trajan', serif; font-size: 4rem; letter-spacing: 5px; margin-bottom: 1rem; }
+.bio-v2 { font-size: 1.1rem; line-height: 1.7; color: #ccc; max-width: 600px; }
+.scroll-indicator-v2 { position: absolute; bottom: 30px; writing-mode: vertical-rl; text-orientation: mixed; font-size: 0.8rem; letter-spacing: 4px; color: #888; }
+.spacer-v2 { height: 50vh; }
+.spacer-v2.final { height: 25vh; }
+.katana-section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; }
+.katana-container { position: relative; z-index: 10; }
+.katana-svg { width: 400px; }
+.katana-blade { filter: url(#glow); }
+.katana-text { margin-top: 4rem; font-family: 'Goudy+Trajan', serif; font-size: 2rem; letter-spacing: 3px; color: #555; }
+#katana-particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; }
+.particle { position: absolute; border-radius: 50%; }
+
+/* --- V3 ANIME.JS REPLICA --- */
+.anime-replica-body { background: #18181F; color: #fff; font-family: 'Inter', sans-serif; }
+.anime-replica-main { max-width: 1100px; margin: 0 auto; padding-top: 120px; }
+.ar-hero { padding: 6rem 2rem; text-align: center; }
+.ar-logo-animation { margin: 0 auto 2rem; width: 100px; height: 100px; }
+.ar-logo-svg path { fill: #FF1461; }
+.ar-title { font-size: 3.5rem; font-weight: 900; }
+.ar-title-word { display: inline-block; }
+.ar-description { font-size: 1.25rem; color: #888; margin-top: 1rem; }
+.ar-section { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 6rem 2rem; border-top: 1px solid #282831; }
+.ar-section:nth-child(odd) { grid-template-columns: 1fr 1fr; }
+.ar-section:nth-child(even) .ar-section-text { order: -1; }
+.ar-section-text h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; }
+.ar-section-text p { font-size: 1.1rem; color: #888; line-height: 1.6; }
+.ar-animation-wrapper { background: #111; padding: 2rem; border-radius: 12px; display: flex; justify-content: center; align-items: center; min-height: 300px; }
+.ar-stagger-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 8px; }
+.ar-stagger-grid .el { width: 30px; height: 30px; background: #14FFC4; border-radius: 6px; }
+.ar-scroll-visualizer { width: 200px; height: 200px; border: 2px solid #333; position: relative; }
+.ar-scroll-line { position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background: #555; }
+.ar-scroll-box { width: 40px; height: 40px; background: #149AFF; position: absolute; top: 50%; left: -20px; transform: translateY(-50%); }
+.ar-draggable-box { width: 100px; height: 100px; background: #FF1461; border-radius: 12px; color: white; display: flex; justify-content: center; align-items: center; font-weight: bold; cursor: grab; }
+.ar-draggable-box:active { cursor: grabbing; }
+
+/* --- V3 MANGA PAGE --- */
+.manga-body-v3 { background: #000; color: #000; font-family: 'Special Elite', monospace; }
+.manga-header { padding: 1rem 2rem; background: #fff; text-align: center; position: relative; border-bottom: 2px solid #000; }
+.manga-header h1 { font-size: 2rem; }
+.manga-header a { position: absolute; top: 50%; right: 2rem; transform: translateY(-50%); color: #000; text-decoration: none; font-weight: bold; }
+.manga-content { max-width: 800px; margin: 0 auto; background: #fff; padding: 1rem; }
+.manga-panel { margin-bottom: 2rem; border: 2px solid #000; padding: 1rem; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.manga-panel.is-visible { opacity: 1; transform: translateY(0); }
+.panel-art { width: 100%; height: 400px; background-size: cover; background-position: center; filter: grayscale(1) contrast(1.3); margin-bottom: 1rem; border: 1px solid #000; }
+.panel-caption { padding: 0.5rem; font-size: 1.1rem; line-height: 1.5; }
+.panel-caption.right { text-align: right; }
+.panel-caption.dialogue { font-style: italic; background: #eee; padding: 1rem; border: 1px solid #ccc; }
+.panel-caption.center-overlay { position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.8); color: #000; padding: 1rem; border: 2px solid #000; width: 80%; text-align: center; }
+.manga-panel.split { display: flex; gap: 1rem; }
+.split-left, .split-right { flex: 1; }
+.panel-caption.small { font-size: 0.9rem; }
+.panel-caption.small.bottom { margin-top: auto; }
+.manga-panel.full-bleed { padding: 0; border: none; position: relative; height: 500px; }
+.manga-panel.full-bleed .panel-art { height: 100%; border: none; }
+
+/* --- AZUKI PAGE (unchanged from V2, it was good) --- */
+.azuki-body-v2 { background: #000; color: #fff; font-family: 'Bebas Neue', cursive; }
+.azuki-main { max-width: 1200px; margin: 0 auto; padding: 120px 2rem 2rem; }
+.azuki-header-v2 { text-align: center; margin-bottom: 4rem; }
+.azuki-header-v2 h1 { font-size: 5rem; color: #ed1c24; letter-spacing: 2px; }
+.azuki-header-v2 p { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--gray-text); max-width: 600px; margin: 1rem auto 0; }
+.azuki-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+.azuki-card { background: #111; border: 1px solid #333; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.azuki-card:hover { transform: translateY(-10px); box-shadow: 0 0 20px #ed1c24; }
+.card-image-container { height: 300px; background-size: cover; background-position: center; }
+.card-info { padding: 1rem; text-transform: uppercase; border-top: 1px solid #333; }
+.card-type { color: var(--gray-text); font-size: 0.9rem; }
+.card-name { font-size: 2rem; color: #fff; margin: 0.25rem 0; letter-spacing: 1px; }
+.card-number { color: #ed1c24; }
+
+/* --- MINDSET (MAC OS) PAGE (unchanged) --- */
+.macos-body { background: #008080; font-family: 'Silkscreen', cursive; height: 100vh; overflow: hidden; }
+.macos-menubar { background: #ccc; color: black; display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; border-bottom: 2px solid black; font-size: 0.9rem; }
+.menu-left span, .menu-left strong { margin-right: 15px; }
+.apple-logo { font-family: sans-serif; }
+.macos-desktop { width: 100%; height: calc(100vh - 29px); position: relative; padding: 20px; }
+.macos-window { position: absolute; width: 600px; background: #ccc; border: 2px solid; border-color: white #808080 #808080 white; box-shadow: 2px 2px 0 black; resize: both; overflow: auto; }
+#video-window { top: 50px; left: 100px; width: 700px; }
+#quotes-window { top: 150px; left: 450px; width: 450px; }
+.window-header { background: linear-gradient(to right, #000080, #1084d0); color: white; padding: 5px; display: flex; align-items: center; cursor: grab; }
+.window-header:active { cursor: grabbing; }
+.window-header .buttons span { display: inline-block; width: 12px; height: 12px; border: 1px solid black; background: #ccc; margin-right: 3px; }
+.window-header .title { flex-grow: 1; text-align: center; font-size: 0.8rem; }
+.window-body { padding: 10px; color: black; }
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.quotes-body p { margin-bottom: 1rem; }
+.quotes-body hr { border: none; border-top: 1px solid #808080; margin: 1rem 0; }
+.nav-portal { position: absolute; bottom: 20px; right: 20px; text-align: center; color: black; }
+.portal-link { display: block; margin-top: 10px; font-family: 'Goudy+Trajan', serif; font-size: 3rem; font-weight: bold; text-decoration: none; background: linear-gradient(45deg, #9333ea, #3b82f6); -webkit-background-clip: text; color: transparent; transition: transform 0.3s ease; }
+.portal-link:hover { transform: scale(1.1); }
